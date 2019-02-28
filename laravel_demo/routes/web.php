@@ -21,3 +21,11 @@ Route::group(['prefix' => 'admin'], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'UserController@index')->name('admin');
+
+Route::get('/list_users', 'UserController@listUsers')->name('list_users');
+
+Route::get('/add_user', 'UserController@getAddUser')->name('add_user');
+
+Route::post('/add_user', 'UserController@addUser')->name('add_user');
